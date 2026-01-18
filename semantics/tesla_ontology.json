@@ -1,0 +1,241 @@
+{
+  "ontology_id": "tesla_resonance_ontology",
+  "ontology_version": "1.0.0",
+  "ontology_status": "canonical",
+  "description": "Formal ontology defining numeric, oscillatory, interference, emergence, and validation concepts underlying the Tesla-Resonance Integrated Workflow.",
+  "scope_constraints": {
+    "excludes": [
+      "free_energy_claims",
+      "aether_physics",
+      "metaphysical_causation",
+      "numerology_without_operational_definition"
+    ],
+    "determinism_required": true,
+    "metaphor_boundary_enforced": true
+  },
+  "core_classes": {
+    "Workflow": {
+      "properties": ["hasLayer", "hasFlow", "hasVersion", "hasDescription"]
+    },
+    "Layer": {
+      "properties": [
+        "layerID",
+        "layerName",
+        "hasElement",
+        "hasTask",
+        "hasPropertySet",
+        "precedes",
+        "follows"
+      ],
+      "constraints": ["acyclic"]
+    },
+    "Element": {
+      "subclasses": [
+        "NumericPrimitive",
+        "NumericSequence",
+        "Ratio",
+        "Function",
+        "Waveform",
+        "Pattern",
+        "Metric"
+      ]
+    },
+    "Task": {
+      "properties": ["taskName", "operatesOn", "produces", "operationType"]
+    },
+    "PropertySet": {
+      "properties": [
+        "definesFunction",
+        "definesRole",
+        "definesEffect",
+        "definesAnalogy",
+        "definesConstraint"
+      ]
+    }
+  },
+  "numeric_primitives": {
+    "Three": {
+      "class": "NumericPrimitive",
+      "properties": {
+        "integer": true,
+        "triadic_role": "initiator",
+        "harmonic_order": 1,
+        "geometric_form": "equilateral_triangle",
+        "wave_role": "primary_frequency_anchor",
+        "phase_role": "cycle_seed"
+      }
+    },
+    "Six": {
+      "class": "NumericPrimitive",
+      "properties": {
+        "integer": true,
+        "triadic_role": "reinforcer",
+        "harmonic_order": 2,
+        "geometric_form": "hexagon",
+        "wave_role": "constructive_interference_amplifier",
+        "phase_role": "mid_cycle_stabilizer"
+      }
+    },
+    "Nine": {
+      "class": "NumericPrimitive",
+      "properties": {
+        "integer": true,
+        "triadic_role": "closure",
+        "harmonic_order": 3,
+        "geometric_form": "nested_triangles",
+        "wave_role": "phase_reset_normalization",
+        "phase_role": "cycle_completion"
+      }
+    }
+  },
+  "numeric_sequences": {
+    "Sequence369": {
+      "class": "NumericSequence",
+      "composed_of": ["Three", "Six", "Nine"],
+      "directionality": "forward",
+      "role": "ordered_triadic_propagation",
+      "symmetry_type": "direct"
+    },
+    "Sequence963": {
+      "class": "NumericSequence",
+      "composed_of": ["Nine", "Six", "Three"],
+      "directionality": "inverted",
+      "role": "mirrored_triadic_propagation",
+      "symmetry_type": "inverse"
+    }
+  },
+  "ratio_classes": {
+    "RationalRatio": {
+      "properties": {
+        "phase_lockable": true,
+        "repeatable": true,
+        "aligns_with_triadic_scaffold": true
+      }
+    },
+    "IrrationalRatio": {
+      "properties": {
+        "phase_lockable": false,
+        "repeatable": false,
+        "introduces_quasi_periodicity": true,
+        "supports_emergence": true
+      }
+    }
+  },
+  "functions": {
+    "Sine": {
+      "class": "Function",
+      "maps": "numeric_to_oscillation",
+      "continuous": true
+    },
+    "Cosine": {
+      "class": "Function",
+      "maps": "numeric_to_oscillation",
+      "continuous": true
+    },
+    "EulerRotation": {
+      "class": "Function",
+      "maps": "linear_to_rotational",
+      "domain": "complex_plane"
+    }
+  },
+  "phase_systems": {
+    "ThreePhaseSystem": {
+      "class": "Waveform",
+      "phase_count": 3,
+      "phase_offset_degrees": 120,
+      "maintains_constant_magnitude": true,
+      "emergent_property": "rotational_field"
+    }
+  },
+  "interference_models": {
+    "HarmonicSeries": {
+      "class": "Pattern",
+      "base_alignment": ["3f", "6f", "9f"],
+      "supports_resonance": true
+    },
+    "InterferencePattern": {
+      "class": "Pattern",
+      "contains": ["constructive", "destructive"],
+      "combines": ["harmonic", "inharmonic"]
+    }
+  },
+  "emergence_models": {
+    "FractalPattern": {
+      "class": "Pattern",
+      "self_similar": true,
+      "scale_invariant": true,
+      "bounded": true
+    },
+    "ChaoticPattern": {
+      "class": "Pattern",
+      "deterministic": true,
+      "sensitive_to_initial_conditions": true,
+      "non_repeating": true
+    }
+  },
+  "interpretive_lenses": {
+    "TernaryLens": {
+      "class": "Pattern",
+      "numeric_base": 3,
+      "role": "diagnostic",
+      "reveals": ["triadic_symmetry", "folding_cycles"]
+    }
+  },
+  "validation_metrics": {
+    "PhaseStabilityIndex": {
+      "class": "Metric",
+      "category": "stability",
+      "derived_from": "phase_vectors",
+      "range": [0, 1],
+      "meaning": "triadic_phase_consistency"
+    },
+    "AmplitudeConstancyIndex": {
+      "class": "Metric",
+      "category": "stability",
+      "derived_from": "resultant_vector_magnitude",
+      "range": [0, 1],
+      "meaning": "rotational_field_smoothness"
+    },
+    "SpectralEntropy": {
+      "class": "Metric",
+      "category": "entropy",
+      "derived_from": "frequency_power_distribution",
+      "range": [0, 1],
+      "meaning": "spectral_complexity"
+    },
+    "TriadicCoherenceScore": {
+      "class": "Metric",
+      "category": "coherence",
+      "derived_from": "harmonic_alignment",
+      "range": [0, 1],
+      "meaning": "triadic_energy_dominance"
+    },
+    "PrimeDisruptionIndex": {
+      "class": "Metric",
+      "category": "coherence",
+      "derived_from": "prime_overlays",
+      "range": [0, 1],
+      "meaning": "prime_induced_deviation"
+    },
+    "FractalDimensionEstimate": {
+      "class": "Metric",
+      "category": "emergence",
+      "derived_from": "fractal_geometry",
+      "range": [1, 3],
+      "meaning": "geometric_complexity"
+    },
+    "LyapunovProxyIndex": {
+      "class": "Metric",
+      "category": "chaos",
+      "derived_from": "initial_condition_sensitivity",
+      "range": [0, 1],
+      "meaning": "divergence_tendency"
+    }
+  },
+  "global_constraints": {
+    "no_metric_is_authoritative": true,
+    "metrics_are_descriptive_only": true,
+    "emergence_must_be_traceable": true,
+    "physical_analogies_non_causal": true
+  }
+}
