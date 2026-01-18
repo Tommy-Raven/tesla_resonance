@@ -1,0 +1,322 @@
+{
+  "workflow_title": "Tesla_Resonance_Workflow",
+  "workflow_version": "1.3",
+  "description": "AI workflow mapping triadic numeric structure (3,6,9), co-parent sequences (369,963), prime counterpoints, rational and irrational ratios, oscillatory dynamics, three-phase rotation, wave interference, fractal emergence, ternary interpretation, and quantitative validation metrics for resonance comparison.",
+  "layers": [
+    {
+      "layer_name": "Base_Triadic_Numbers",
+      "id": "L1",
+      "description": "Triadic integers forming the foundational harmonic scaffold.",
+      "elements": ["3", "6", "9"],
+      "properties": {
+        "function": "Anchor rational multiples, harmonic resonance, and phase alignment.",
+        "geometric_analogy": ["triangle", "hexagon", "envelope_closure"],
+        "numeric_role": "Base integers for triadic rotation, integer grids, and modular repetition."
+      },
+      "sub_layers": [
+        {
+          "number": 3,
+          "description": "Fundamental triadic unit, initiator of harmonic cycle.",
+          "properties": {
+            "numeric_role": "Seed of triad, base of phase cycle, lowest integer harmonic",
+            "geometric_analogy": "equilateral_triangle",
+            "wave_function": "primary_frequency_anchor"
+          }
+        },
+        {
+          "number": 6,
+          "description": "Double of 3, reinforces triadic symmetry.",
+          "properties": {
+            "numeric_role": "Harmonic amplifier, midpoint closure, reinforcement frequency",
+            "geometric_analogy": "hexagon",
+            "wave_function": "constructive_interference_enhancer"
+          }
+        },
+        {
+          "number": 9,
+          "description": "Triad completion, closure of triadic cycle.",
+          "properties": {
+            "numeric_role": "Waveform envelope closure, ultimate triadic resonance, total cycle sum",
+            "geometric_analogy": "nested_triangles",
+            "wave_function": "phase_reset_and_normalization"
+          }
+        },
+        {
+          "co_parent_numbers": ["369", "963"],
+          "description": "Sequential and mirrored triadic propagation paths.",
+          "properties": {
+            "numeric_role": "Ordered and inverted triadic flow",
+            "geometric_analogy": "mirrored_polygonal_path",
+            "wave_function": "temporal_phase_propagation",
+            "interference_role": "symmetry_validation"
+          }
+        }
+      ],
+      "tasks": [
+        {
+          "task_name": "Generate_Triad_Sequence",
+          "operation": "compute multiples of 3 up to N",
+          "output": "triad_sequence"
+        },
+        {
+          "task_name": "Map_Geometric_Analogy",
+          "operation": "assign geometric forms to triadic numbers and sequences",
+          "output": "triad_geometry"
+        },
+        {
+          "task_name": "Overlay_CoParent_Sequence",
+          "operation": "apply forward and inverted triadic propagation",
+          "output": "co_parent_phase_map"
+        }
+      ]
+    },
+    {
+      "layer_name": "Prime_Counterpoints",
+      "id": "L2",
+      "description": "Primes greater than 3 as non-aligning perturbations to the triadic scaffold.",
+      "elements": ["5", "7", "11", "13", "17"],
+      "properties": {
+        "function": "Introduce inharmonic deviations.",
+        "effect": "Create counterpoint and phase drift.",
+        "numeric_role": "Structural irregularity markers."
+      },
+      "tasks": [
+        {
+          "task_name": "Identify_Primes",
+          "operation": "generate primes excluding multiples of 3",
+          "output": "prime_list"
+        },
+        {
+          "task_name": "Overlay_on_Triad_Grid",
+          "operation": "map prime offsets against triadic multiples",
+          "output": "prime_offsets_map"
+        }
+      ]
+    },
+    {
+      "layer_name": "Rational_Irrational_Ratios",
+      "id": "L3",
+      "description": "Alignment (rational) and drift (irrational) across the triadic scaffold.",
+      "elements": ["1/3", "2/9", "√2", "π", "e"],
+      "properties": {
+        "function": "Control phase locking versus quasi-periodicity.",
+        "effect": "Enable structured order or emergent complexity.",
+        "numeric_role": "Bridge numeric ratios to wave behavior."
+      },
+      "tasks": [
+        {
+          "task_name": "Compute_Rational_Ratios",
+          "operation": "generate ratios aligned with triadic multiples",
+          "output": "rational_ratios"
+        },
+        {
+          "task_name": "Compute_Irrational_Overlays",
+          "operation": "produce truncated irrational sequences",
+          "output": "irrational_sequence"
+        },
+        {
+          "task_name": "Map_Ratios_to_Triad",
+          "operation": "overlay ratios onto triadic structure",
+          "output": "ratio_overlay_map"
+        }
+      ]
+    },
+    {
+      "layer_name": "Sine_Cosine_Oscillations",
+      "id": "L4",
+      "description": "Translation of numeric ratios into oscillatory motion.",
+      "elements": ["sin(θ)", "cos(θ)", "e^(iθ)"],
+      "properties": {
+        "function": "Convert numeric relationships into cyclic motion.",
+        "phase_offset": "Support 120° triadic separation.",
+        "physical_analogy": "rotating_fields"
+      },
+      "tasks": [
+        {
+          "task_name": "Compute_Sine_Cosine",
+          "operation": "compute oscillatory values over time",
+          "output": "oscillation_data"
+        },
+        {
+          "task_name": "Generate_Euler_Representation",
+          "operation": "map oscillations to complex plane",
+          "output": "complex_phase_vectors"
+        }
+      ]
+    },
+    {
+      "layer_name": "Three_Phase_Rotation",
+      "id": "L5",
+      "description": "Triadic phase system producing continuous rotational vectors.",
+      "elements": [
+        "Va(t)=V0*sin(ωt)",
+        "Vb(t)=V0*sin(ωt-120°)",
+        "Vc(t)=V0*sin(ωt-240°)"
+      ],
+      "properties": {
+        "function": "Generate smooth rotational fields.",
+        "effect": "Maintain constant magnitude vector.",
+        "numeric_role": "Applied triadic phase offsets."
+      },
+      "tasks": [
+        {
+          "task_name": "Simulate_Three_Phase_Currents",
+          "operation": "compute vector sum of three phases",
+          "output": "rotating_field_data"
+        },
+        {
+          "task_name": "Verify_Constant_Magnitude",
+          "operation": "measure magnitude variance",
+          "output": "stability_check"
+        }
+      ]
+    },
+    {
+      "layer_name": "Wave_Interference_Harmonics",
+      "id": "L6",
+      "description": "Interference of harmonic and inharmonic frequency components.",
+      "elements": ["3f", "6f", "9f", "irrational_overlays"],
+      "properties": {
+        "function": "Produce resonance textures.",
+        "effect": "Generate harmonic richness and modulation.",
+        "physical_analogy": "standing_waves"
+      },
+      "tasks": [
+        {
+          "task_name": "Compute_Harmonics",
+          "operation": "generate integer frequency multiples",
+          "output": "harmonic_series"
+        },
+        {
+          "task_name": "Overlay_Irrational_Frequencies",
+          "operation": "add inharmonic components",
+          "output": "quasi_periodic_waveforms"
+        },
+        {
+          "task_name": "Simulate_Interference",
+          "operation": "compute constructive and destructive interference",
+          "output": "interference_map"
+        }
+      ]
+    },
+    {
+      "layer_name": "Fractal_Chaotic_Emergence",
+      "id": "L7",
+      "description": "Emergent complexity from interference patterns.",
+      "elements": ["fractal_patterns", "chaotic_modulation"],
+      "properties": {
+        "function": "Model bounded chaos and self-similarity.",
+        "effect": "Reveal sensitivity to initial conditions.",
+        "physical_analogy": "turbulence"
+      },
+      "tasks": [
+        {
+          "task_name": "Generate_Fractal_Patterns",
+          "operation": "iterate interference data",
+          "output": "fractal_waveforms"
+        },
+        {
+          "task_name": "Simulate_Chaotic_Modulation",
+          "operation": "analyze divergence sensitivity",
+          "output": "chaotic_overlay"
+        }
+      ]
+    },
+    {
+      "layer_name": "Base_3_Ternary_Lens",
+      "id": "L8",
+      "description": "Interpretive lens using base-3 representation.",
+      "elements": ["powers_of_3", "modular_folding"],
+      "properties": {
+        "function": "Expose triadic symmetry.",
+        "effect": "Highlight folding cycles.",
+        "numeric_role": "Diagnostic representation."
+      },
+      "tasks": [
+        {
+          "task_name": "Compute_Base3_Representation",
+          "operation": "convert numeric outputs to base-3",
+          "output": "ternary_sequence"
+        },
+        {
+          "task_name": "Apply_Modular_Folding",
+          "operation": "identify repeating triadic cycles",
+          "output": "folded_patterns"
+        }
+      ]
+    },
+    {
+      "layer_name": "Validation_and_Measurement",
+      "id": "L9",
+      "description": "Quantitative metrics for comparing resonance states.",
+      "elements": [
+        "PhaseStabilityIndex",
+        "AmplitudeConstancyIndex",
+        "SpectralEntropy",
+        "TriadicCoherenceScore",
+        "PrimeDisruptionIndex",
+        "FractalDimensionEstimate",
+        "LyapunovProxyIndex"
+      ],
+      "properties": {
+        "function": "Measure stability, coherence, entropy, and emergence.",
+        "effect": "Enable objective comparison of resonance states.",
+        "constraint": "Metrics are descriptive, not causal."
+      },
+      "tasks": [
+        {
+          "task_name": "Compute_PhaseStabilityIndex",
+          "operation": "measure variance from ideal 120° offsets",
+          "output": "psi_value"
+        },
+        {
+          "task_name": "Compute_AmplitudeConstancyIndex",
+          "operation": "measure resultant magnitude variance",
+          "output": "aci_value"
+        },
+        {
+          "task_name": "Compute_SpectralEntropy",
+          "operation": "compute frequency power distribution entropy",
+          "output": "spectral_entropy"
+        },
+        {
+          "task_name": "Compute_TriadicCoherenceScore",
+          "operation": "measure energy aligned with 3f,6f,9f",
+          "output": "triadic_coherence"
+        },
+        {
+          "task_name": "Compute_PrimeDisruptionIndex",
+          "operation": "quantify prime-induced deviation",
+          "output": "prime_disruption"
+        },
+        {
+          "task_name": "Compute_FractalDimension",
+          "operation": "estimate geometric complexity",
+          "output": "fractal_dimension"
+        },
+        {
+          "task_name": "Estimate_Lyapunov_Proxy",
+          "operation": "approximate divergence sensitivity",
+          "output": "lyapunov_proxy"
+        },
+        {
+          "task_name": "Compare_Resonance_States",
+          "operation": "compare metric vectors across configurations",
+          "output": "resonance_state_comparison"
+        }
+      ]
+    }
+  ],
+  "continuum_flow": [
+    "Base_Triadic_Numbers",
+    "Prime_Counterpoints",
+    "Rational_Irrational_Ratios",
+    "Sine_Cosine_Oscillations",
+    "Three_Phase_Rotation",
+    "Wave_Interference_Harmonics",
+    "Fractal_Chaotic_Emergence",
+    "Base_3_Ternary_Lens",
+    "Validation_and_Measurement",
+    "Physical_Abstraction"
+  ]
+}
