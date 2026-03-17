@@ -4,7 +4,11 @@
     "abbreviation": "IRSC",
     "version": "1.2.0",
     "methodology": "retrospective_structural_evaluation",
-    "description": "Deterministic multi-chart workflow integrating Tesla-style triadic numeric resonance, chronological synchronicity analysis, and comparative astrological evaluation. Excludes prediction, causal attribution, and user-desire-driven outputs."
+    "description": "Deterministic multi-chart workflow integrating Tesla-style triadic numeric resonance, chronological synchronicity analysis, and comparative astrological evaluation. Excludes prediction, causal attribution, and user-desire-driven outputs.",
+    "external_links": {
+      "tesla_ontology_file": "tesla_resonance_ontology.json",
+      "tesla_workflow_file": "Tesla_Resonance_Workflow.json"
+    }
   },
 
   "authority": {
@@ -20,12 +24,77 @@
     "name": "Tesla_Resonance_Structural_Model",
     "version": "1.0.0",
     "scope": "numeric_and_wave_structure_only",
-    "ontology_reference": "tesla_resonance_ontology@1.0.0",
-    "workflow_reference": "Tesla_Resonance_Workflow@1.3",
+
+    "ontology_reference": {
+      "file": "tesla_resonance_ontology.json",
+      "ontology_id": "tesla_resonance_ontology",
+      "ontology_version": "1.0.0",
+      "class_mappings": {
+        "Workflow": "Workflow",
+        "Layer": "Layer",
+        "Element": "Element",
+        "Task": "Task",
+        "PropertySet": "PropertySet",
+        "NumericPrimitive_3": "Three",
+        "NumericPrimitive_6": "Six",
+        "NumericPrimitive_9": "Nine",
+        "NumericSequence_369": "Sequence369",
+        "NumericSequence_963": "Sequence963",
+        "RationalRatio": "RationalRatio",
+        "IrrationalRatio": "IrrationalRatio",
+        "Sine_Function": "Sine",
+        "Cosine_Function": "Cosine",
+        "EulerRotation_Function": "EulerRotation",
+        "ThreePhaseSystem_Waveform": "ThreePhaseSystem",
+        "HarmonicSeries_Pattern": "HarmonicSeries",
+        "InterferencePattern_Pattern": "InterferencePattern",
+        "FractalPattern_Pattern": "FractalPattern",
+        "ChaoticPattern_Pattern": "ChaoticPattern",
+        "TernaryLens_Pattern": "TernaryLens",
+        "PhaseStabilityIndex_Metric": "PhaseStabilityIndex",
+        "AmplitudeConstancyIndex_Metric": "AmplitudeConstancyIndex",
+        "SpectralEntropy_Metric": "SpectralEntropy",
+        "TriadicCoherenceScore_Metric": "TriadicCoherenceScore",
+        "PrimeDisruptionIndex_Metric": "PrimeDisruptionIndex",
+        "FractalDimensionEstimate_Metric": "FractalDimensionEstimate",
+        "LyapunovProxyIndex_Metric": "LyapunovProxyIndex"
+      }
+    },
+
+    "workflow_reference": {
+      "file": "Tesla_Resonance_Workflow.json",
+      "workflow_title": "Tesla_Resonance_Workflow",
+      "workflow_version": "1.3",
+      "layer_mappings": {
+        "base_triadic_numbers": "Base_Triadic_Numbers",
+        "prime_counterpoints": "Prime_Counterpoints",
+        "rational_irrational_ratios": "Rational_Irrational_Ratios",
+        "sine_cosine_oscillations": "Sine_Cosine_Oscillations",
+        "three_phase_rotation": "Three_Phase_Rotation",
+        "wave_interference_harmonics": "Wave_Interference_Harmonics",
+        "fractal_chaotic_emergence": "Fractal_Chaotic_Emergence",
+        "base3_ternary_lens": "Base_3_Ternary_Lens",
+        "validation_and_measurement": "Validation_and_Measurement"
+      },
+      "metric_mappings": {
+        "PhaseStabilityIndex": "PhaseStabilityIndex",
+        "AmplitudeConstancyIndex": "AmplitudeConstancyIndex",
+        "SpectralEntropy": "SpectralEntropy",
+        "TriadicCoherenceScore": "TriadicCoherenceScore",
+        "PrimeDisruptionIndex": "PrimeDisruptionIndex",
+        "FractalDimensionEstimate": "FractalDimensionEstimate",
+        "LyapunovProxyIndex": "LyapunovProxyIndex"
+      }
+    },
 
     "layers": {
       "base_triadic_numbers": {
         "id": "L1",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Base_Triadic_Numbers",
+          "ontology_elements": ["Three", "Six", "Nine", "Sequence369", "Sequence963"]
+        },
         "elements": [3, 6, 9],
         "function": "harmonic_scaffold_and_phase_alignment",
         "properties": {
@@ -36,57 +105,130 @@
         "sub_layers": {
           "3": {
             "role": "initiator",
-            "wave_function": "primary_phase_anchor"
+            "wave_function": "primary_phase_anchor",
+            "ontology_ref": {
+              "file": "tesla_resonance_ontology.json",
+              "numeric_primitive": "Three"
+            }
           },
           "6": {
             "role": "reinforcement",
-            "wave_function": "constructive_interference"
+            "wave_function": "constructive_interference",
+            "ontology_ref": {
+              "file": "tesla_resonance_ontology.json",
+              "numeric_primitive": "Six"
+            }
           },
           "9": {
             "role": "closure",
-            "wave_function": "phase_reset"
+            "wave_function": "phase_reset",
+            "ontology_ref": {
+              "file": "tesla_resonance_ontology.json",
+              "numeric_primitive": "Nine"
+            }
           }
         },
         "co_parent_numbers": {
           "values": ["369", "963"],
-          "role": "sequential_and_mirrored_flow"
+          "role": "sequential_and_mirrored_flow",
+          "ontology_ref": {
+            "file": "tesla_resonance_ontology.json",
+            "sequences": ["Sequence369", "Sequence963"]
+          }
         }
       },
 
       "prime_counterpoints": {
         "id": "L2",
         "description": "Non_triadic_irregularities",
-        "function": "cycle_disruption_and_counterpoint"
+        "function": "cycle_disruption_and_counterpoint",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Prime_Counterpoints"
+        }
       },
 
       "rational_irrational_ratios": {
         "id": "L3",
-        "description": "alignment_and_drift_across_triadic_scaffold"
+        "description": "alignment_and_drift_across_triadic_scaffold",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Rational_Irrational_Ratios"
+        },
+        "ontology_ratio_classes": {
+          "rational_ratio_class": "RationalRatio",
+          "irrational_ratio_class": "IrrationalRatio",
+          "ontology_file": "tesla_resonance_ontology.json"
+        }
       },
 
       "sine_cosine_oscillations": {
         "id": "L4",
-        "description": "numeric_to_oscillatory_translation"
+        "description": "numeric_to_oscillatory_translation",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Sine_Cosine_Oscillations"
+        },
+        "ontology_function_refs": {
+          "sine": "Sine",
+          "cosine": "Cosine",
+          "euler_rotation": "EulerRotation",
+          "ontology_file": "tesla_resonance_ontology.json"
+        }
       },
 
       "three_phase_rotation": {
         "id": "L5",
-        "description": "triadic_rotational_stability_model"
+        "description": "triadic_rotational_stability_model",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Three_Phase_Rotation"
+        },
+        "ontology_waveform_ref": {
+          "file": "tesla_resonance_ontology.json",
+          "waveform_class": "ThreePhaseSystem"
+        }
       },
 
       "wave_interference_harmonics": {
         "id": "L6",
-        "description": "constructive_and_destructive_interference"
+        "description": "constructive_and_destructive_interference",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Wave_Interference_Harmonics"
+        },
+        "ontology_interference_models": {
+          "harmonic_series": "HarmonicSeries",
+          "interference_pattern": "InterferencePattern",
+          "ontology_file": "tesla_resonance_ontology.json"
+        }
       },
 
       "fractal_chaotic_emergence": {
         "id": "L7",
-        "description": "emergent_complexity_and_sensitivity"
+        "description": "emergent_complexity_and_sensitivity",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Fractal_Chaotic_Emergence"
+        },
+        "ontology_emergence_models": {
+          "fractal_pattern": "FractalPattern",
+          "chaotic_pattern": "ChaoticPattern",
+          "ontology_file": "tesla_resonance_ontology.json"
+        }
       },
 
       "base3_ternary_lens": {
         "id": "L8",
-        "description": "ternary_representation_and_modular_folding"
+        "description": "ternary_representation_and_modular_folding",
+        "external_layer_ref": {
+          "workflow_file": "Tesla_Resonance_Workflow.json",
+          "layer_name": "Base_3_Ternary_Lens"
+        },
+        "ontology_interpretive_lens": {
+          "ternary_lens": "TernaryLens",
+          "ontology_file": "tesla_resonance_ontology.json"
+        }
       }
     },
 
@@ -100,7 +242,11 @@
         "wave_interference_harmonics",
         "fractal_chaotic_emergence",
         "base3_ternary_lens"
-      ]
+      ],
+      "external_flow_ref": {
+        "workflow_file": "Tesla_Resonance_Workflow.json",
+        "continuum_flow_key": "continuum_flow"
+      }
     }
   },
 
@@ -109,14 +255,12 @@
     "abbreviation": "CSEF",
     "version": "1.0.0",
     "methodology": "retrospective_pattern_analysis",
-
     "assumptions": {
       "spontaneity": true,
       "no_forethought": true,
       "meaning_post_hoc_only": true,
       "numbers_symbolic_not_causal": true
     },
-
     "inputs": {
       "accepted_types": [
         "clock_time",
@@ -136,7 +280,6 @@
         "activity_context"
       ]
     },
-
     "processing": {
       "order": [
         "event_level_analysis",
@@ -148,14 +291,12 @@
         "phase_transition_detection",
         "integration_classification"
       ],
-
       "event_level_analysis": {
         "digit_analysis": true,
         "format_analysis": true,
         "environmental_symbolism_allowed": true,
         "clock_specific_logic": true
       },
-
       "structural_decomposition": {
         "split_digits": true,
         "preserve_order": true,
@@ -163,13 +304,11 @@
         "detect_mirroring": true,
         "detect_thresholds": true
       },
-
       "numerological_reduction": {
         "primary": "sum_digits",
         "secondary": "repeat_until_single_digit",
         "retain_master_numbers": [11, 22, 33]
       },
-
       "contextual_encoding": {
         "clock_time": "temporal_threshold",
         "calendar_date": "cycle_position",
@@ -177,19 +316,16 @@
         "numeric_cluster": "reinforcement_signal",
         "standalone_integer": "directive_marker"
       },
-
       "pattern_aggregation": {
         "frequency_analysis": true,
         "cycle_detection": true,
         "theme_clustering": true
       },
-
       "phase_transition_detection": {
         "threshold_progression": true,
         "role_redefinition": true,
         "integration_markers": true
       },
-
       "integration_classification": {
         "action": "external_change",
         "integration": "internal_clarification",
@@ -239,7 +375,6 @@
       "progressed_chart",
       "transit_chart"
     ],
-
     "allowed_operations": {
       "compilation": true,
       "inspection": true,
@@ -248,7 +383,6 @@
       "contrasting": true,
       "parsing": true
     },
-
     "astrological_analysis_capabilities": {
       "independent_generic_readings": true,
       "natal_chart_reading": true,
@@ -258,7 +392,6 @@
       "group_readings_multi_chart": true,
       "natal_to_current_planet_alignment": true
     },
-
     "astrological_knowledge_base": {
       "use_known_relations": true,
       "allowed_relations": [
@@ -277,7 +410,6 @@
       "source_type": "commonly_known_astrological_relationships",
       "hallucinatory_inference_allowed": false
     },
-
     "interpretation_rules": {
       "derive_only_from": [
         "user_uploaded_data",
