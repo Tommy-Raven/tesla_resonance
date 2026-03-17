@@ -1,0 +1,328 @@
+{
+  "tesla_resonance": {
+    "semantics": {
+      "tesla_resonance_ontology": {
+        "ontology_id": "tesla_resonance_ontology",
+        "ontology_version": "1.1.0",
+        "numeric_primitives": {
+          "Three": {
+            "class": "NumericPrimitive",
+            "properties": {
+              "integer": true,
+              "base_role": "base_root",
+              "triadic_role": "root",
+              "relation_to_3": "3",
+              "power_of_3": 1
+            }
+          },
+          "Six": {
+            "class": "NumericPrimitive",
+            "properties": {
+              "integer": true,
+              "base_role": "double_base",
+              "triadic_role": "double_root",
+              "relation_to_3": "2x3",
+              "power_of_3": 1,
+              "multiplier": 2
+            }
+          },
+          "Nine": {
+            "class": "NumericPrimitive",
+            "properties": {
+              "integer": true,
+              "base_role": "base_square",
+              "triadic_role": "square_root",
+              "relation_to_3": "3^2",
+              "power_of_3": 2
+            }
+          },
+          "TwentySeven": {
+            "class": "NumericPrimitive",
+            "properties": {
+              "integer": true,
+              "base_role": "base_cubed",
+              "triadic_role": "cube_root",
+              "relation_to_3": "3^3",
+              "power_of_3": 3
+            }
+          }
+        },
+        "numeric_sequences": {
+          "Sequence3_Powers": {
+            "class": "NumericSequence",
+            "composed_of": ["Three", "Nine", "TwentySeven"],
+            "role": "base_power_ladder",
+            "semantics": {
+              "3": "base_root",
+              "9": "base_square",
+              "27": "base_cubed"
+            }
+          },
+          "Sequence369": {
+            "class": "NumericSequence",
+            "composed_of": ["Three", "Six", "Nine"],
+            "role": "root_double_square_chain",
+            "semantics": {
+              "3": "base_root",
+              "6": "double_base",
+              "9": "base_square"
+            }
+          }
+        }
+      }
+    },
+    "workflows": {
+      "Tesla_Resonance_Workflow": {
+        "workflow_title": "Tesla_Resonance_Workflow",
+        "workflow_version": "1.4",
+        "description": "Workflow mapping powers and multiples of base 3 (root, double, square, cube), prime counterpoints, ratios, oscillations, three-phase behavior, interference, emergence, ternary interpretation, and validation metrics.",
+        "layers": [
+          {
+            "layer_name": "Base_Triadic_Power_Ladder",
+            "id": "L1",
+            "description": "Power-of-3 ladder and its key derivative (double base).",
+            "elements": ["3", "6", "9", "27"],
+            "properties": {
+              "numeric_roles": {
+                "3": "base_root",
+                "6": "double_base",
+                "9": "base_square",
+                "27": "base_cubed"
+              },
+              "sequence_refs": [
+                "Sequence3_Powers",
+                "Sequence369"
+              ]
+            },
+            "sub_layers": [
+              {
+                "number": 3,
+                "label": "root",
+                "description": "Base/root value 3.",
+                "properties": {
+                  "base_role": "base_root",
+                  "power_of_3": 1,
+                  "wave_function": "primary_phase_root"
+                }
+              },
+              {
+                "number": 6,
+                "label": "double",
+                "description": "Double base, 2×3.",
+                "properties": {
+                  "base_role": "double_base",
+                  "multiplier": 2,
+                  "power_of_3": 1,
+                  "wave_function": "reinforced_root"
+                }
+              },
+              {
+                "number": 9,
+                "label": "square",
+                "description": "Base squared, 3^2.",
+                "properties": {
+                  "base_role": "base_square",
+                  "power_of_3": 2,
+                  "wave_function": "phase_square"
+                }
+              },
+              {
+                "number": 27,
+                "label": "cube",
+                "description": "Base cubed, 3^3.",
+                "properties": {
+                  "base_role": "base_cubed",
+                  "power_of_3": 3,
+                  "wave_function": "phase_cube"
+                }
+              }
+            ],
+            "tasks": [
+              {
+                "task_name": "Generate_Power_Ladder",
+                "operation": "compute 3^n up to 3^k (k>=3)",
+                "output": "power_ladder"
+              },
+              {
+                "task_name": "Classify_Base_Role",
+                "operation": "map each value to {base_root,double_base,base_square,base_cubed,other}",
+                "output": "base_role_map"
+              },
+              {
+                "task_name": "Tag_Sequence_Semantics",
+                "operation": "annotate sequences 3-6-9 and 3-9-27 with base roles",
+                "output": "sequence_role_annotations"
+              }
+            ]
+          },
+          {
+            "layer_name": "Prime_Counterpoints",
+            "id": "L2",
+            "description": "Primes as deviations from pure power-of-3 ladder.",
+            "elements": ["5", "7", "11", "13", "17"],
+            "properties": {
+              "function": "Mark non-base, non-power-of-3 intrusions.",
+              "effect": "Introduce structural irregularity and drift."
+            }
+          },
+          {
+            "layer_name": "Rational_Irrational_Ratios",
+            "id": "L3",
+            "description": "Ratios measured relative to base_root, base_square, base_cubed.",
+            "elements": ["1/3", "2/3", "1/9", "1/27", "√2", "π"],
+            "properties": {
+              "reference_bases": ["3", "9", "27"],
+              "role": "link numeric ratios to base roles and periodicity."
+            }
+          },
+          {
+            "layer_name": "Sine_Cosine_Oscillations",
+            "id": "L4",
+            "description": "Oscillatory translation of base_root, double_base, base_square, base_cubed frequencies.",
+            "elements": ["sin(ω3 t)", "sin(ω6 t)", "sin(ω9 t)", "sin(ω27 t)"]
+          },
+          {
+            "layer_name": "Three_Phase_Rotation",
+            "id": "L5",
+            "description": "Three-phase system anchored on base_root and its powers.",
+            "elements": [
+              "Va(t)=V0*sin(ω3 t)",
+              "Vb(t)=V0*sin(ω3 t-120°)",
+              "Vc(t)=V0*sin(ω3 t-240°)"
+            ]
+          },
+          {
+            "layer_name": "Wave_Interference_Harmonics",
+            "id": "L6",
+            "description": "Interference patterns emphasizing 3, 9, 27 as dominant bases.",
+            "elements": ["3f", "9f", "27f"]
+          },
+          {
+            "layer_name": "Fractal_Chaotic_Emergence",
+            "id": "L7",
+            "description": "Emergence shaped by repeated application of base_square and base_cubed scales."
+          },
+          {
+            "layer_name": "Base_3_Ternary_Lens",
+            "id": "L8",
+            "description": "Base-3 representation used to explicitly mark root/double/square/cube digits."
+          },
+          {
+            "layer_name": "Validation_and_Measurement",
+            "id": "L9",
+            "description": "Metrics for how strongly a signal expresses base_root/double_base/base_square/base_cubed patterns.",
+            "elements": [
+              "TriadicCoherenceScore",
+              "PrimeDisruptionIndex"
+            ]
+          }
+        ],
+        "continuum_flow": [
+          "Base_Triadic_Power_Ladder",
+          "Prime_Counterpoints",
+          "Rational_Irrational_Ratios",
+          "Sine_Cosine_Oscillations",
+          "Three_Phase_Rotation",
+          "Wave_Interference_Harmonics",
+          "Fractal_Chaotic_Emergence",
+          "Base_3_Ternary_Lens",
+          "Validation_and_Measurement"
+        ]
+      }
+    },
+    "IRSC_integration": {
+      "lens.synchronicity": {
+        "name": "Chronological_Synchronicity_Evaluation_Framework",
+        "abbreviation": "CSEF",
+        "version": "1.1.0",
+        "methodology": "retrospective_pattern_analysis",
+        "assumptions": {
+          "spontaneity": true,
+          "no_forethought": true,
+          "meaning_post_hoc_only": true,
+          "numbers_symbolic_not_causal": true
+        },
+        "inputs": {
+          "accepted_types": [
+            "clock_time",
+            "calendar_date",
+            "numeric_cluster",
+            "environmental_metric",
+            "standalone_integer"
+          ],
+          "required_metadata": [
+            "sequence_order",
+            "context_type",
+            "timestamp_known"
+          ]
+        },
+        "processing": {
+          "order": [
+            "event_level_analysis",
+            "structural_decomposition",
+            "numerological_reduction",
+            "base_role_annotation",
+            "contextual_encoding",
+            "chronological_alignment",
+            "pattern_aggregation",
+            "phase_transition_detection",
+            "integration_classification"
+          ],
+          "event_level_analysis": {
+            "digit_analysis": true,
+            "format_analysis": true
+          },
+          "structural_decomposition": {
+            "split_digits": true,
+            "preserve_order": true
+          },
+          "numerological_reduction": {
+            "primary": "sum_digits",
+            "secondary": "repeat_until_single_digit",
+            "retain_master_numbers": [11, 22, 33]
+          },
+          "base_role_annotation": {
+            "description": "After reduction, classify result into base_root/double_base/base_square/base_cubed/other.",
+            "mapping_rules": {
+              "3": "base_root",
+              "6": "double_base",
+              "9": "base_square",
+              "27": "base_cubed"
+            },
+            "operations": [
+              "compute_raw_reduction",
+              "if result in {3,6,9} assign base_*",
+              "if original_value in {27} tag base_cubed_even_if_reduced_to_9",
+              "else tag as other_base"
+            ],
+            "outputs": [
+              "base_role_label",
+              "base_role_confidence"
+            ]
+          },
+          "contextual_encoding": {
+            "clock_time": "temporal_threshold_with_base_role_tags",
+            "calendar_date": "cycle_position_with_base_role_tags",
+            "numeric_cluster": "reinforcement_signal_with_root_double_square_cube_balance",
+            "standalone_integer": "directive_marker_with_base_role"
+          },
+          "pattern_aggregation": {
+            "frequency_analysis": true,
+            "cycle_detection": true,
+            "theme_clustering": true,
+            "base_role_histogram": true
+          },
+          "phase_transition_detection": {
+            "threshold_progression": true,
+            "base_role_shift_detection": true
+          },
+          "integration_classification": {
+            "action": "external_change",
+            "integration": "internal_clarification",
+            "observation": "log_only"
+          }
+        }
+      }
+    }
+  }
+}
